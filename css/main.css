@@ -16,7 +16,7 @@
   --dark-text: #000000c4;
 
   --primary: rgb(165, 165, 165);
-  --secondary: #dfdfdf;
+  --secondary: #ffffff;
 
   /* Font family used in the Project*/
   --Montserrat: 'Montserrat';
@@ -95,6 +95,7 @@ section {
 
 button {
   display: inline-block;
+  /* justify-content: center; */
 
   width: 250px;
   font-size: 1.1rem;
@@ -212,6 +213,8 @@ ul > li {
 .container--flex {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container--items {
@@ -363,5 +366,31 @@ ul > li {
   }
   .contact-Us + * {
     padding-top: 5em;
+  }
+}
+
+/* Footer */
+.created--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3.5rem 0;
+}
+
+.created-by,
+.social-icons {
+  font-size: clamp(0.7rem, 2.2vw, 3rem);
+}
+
+.social-icons {
+  cursor: pointer;
+}
+
+@media (min-width: 50em) {
+  .created--flex {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
