@@ -1,0 +1,367 @@
+@import url(./fonts.css);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Directry for all colors and fronts  */
+
+:root {
+  --nav-text: rgba(255, 255, 255, 0.99);
+  --main-text: rgba(0, 0, 0, 0.645);
+  --dark-text: #000000c4;
+
+  --primary: rgb(165, 165, 165);
+  --secondary: #dfdfdf;
+
+  /* Font family used in the Project*/
+  --Montserrat: 'Montserrat';
+  --Alegreya: 'Alegreya';
+}
+
+body {
+  font-family: var(--Alegreya);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+h6 {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h6 {
+  line-height: 1;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-text);
+  max-width: 100%;
+  letter-spacing: 0.1rem;
+}
+p {
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  font-weight: normal;
+  font-weight: lighter;
+  color: var(--main-text);
+  max-width: 100%;
+}
+
+@media (min-width: 50em) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  ul {
+    background-color: var(--primary);
+    font-size: 1.5rem;
+  }
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 0.2em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text);
+}
+
+img,
+i {
+  max-width: 100%;
+}
+
+nav {
+  padding: 1.2em 0;
+}
+
+section {
+  padding: 3em 0;
+}
+
+button {
+  display: inline-block;
+
+  width: 250px;
+  font-size: 1.1rem;
+
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: var(--Alegreya);
+  border-radius: 25px;
+  border: 1px solid;
+  padding: 1em;
+
+  background: none;
+
+  transform: all linear 0.5ms;
+}
+
+button:hover {
+  background: grey;
+  border: none;
+  color: var(--nav-text);
+}
+
+.container {
+  margin-inline: auto;
+  width: clamp(200px, 90%, 100em);
+}
+
+.bg--grey {
+  background-color: var(--primary);
+}
+
+.bg-light {
+  background-color: var(--secondary);
+}
+
+.nav-items {
+  text-align: center;
+}
+
+ul > li {
+  /* background-color: var(--secondary); */
+  margin-inline: auto;
+  list-style-type: none;
+  /* border-bottom: 0.1rem solid; */
+}
+
+.toggle-bar {
+  position: absolute;
+  left: 85%;
+  top: 1rem;
+  opacity: 1;
+}
+
+/* .hidden {
+  opacity: 0;
+} */
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------ Nav-Bar media query ----------------------------- */
+
+@media (min-width: 50em) {
+  .split {
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary);
+  }
+
+  .split {
+    flex-basis: 100%;
+  }
+  .nav-items ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30rem;
+
+    opacity: 1;
+  }
+  .name h3 {
+    font-size: 1.5rem;
+    padding: 0.8em 0;
+    font-family: var(--Montserrat);
+  }
+  .toggle-bar {
+    opacity: 0;
+  }
+}
+
+/* ------------------ Heder container ------------------- */
+.container--center {
+  padding: 2em 0 5em 0;
+}
+
+.scroll-bar {
+  padding: 2em 0 0 0;
+}
+
+/* --------------------- Media query for the header ---------------------- */
+@media (min-width: 50em) {
+  .container--center {
+    padding: 8em 0 20em 0;
+  }
+  .scroll-bar {
+    position: relative;
+    bottom: -14rem;
+  }
+}
+
+/*-------- Media query for the container--flex(Section-1)-------------- */
+
+.container--flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.container--items {
+  padding: 2em 0;
+}
+
+.container--items h1 {
+  padding-bottom: 2.5rem;
+}
+
+.container--image img {
+  padding: 3em 0;
+}
+
+@media (min-width: 50em) {
+  .container--padding {
+    padding: 4em 0 6em 0;
+  }
+
+  .container--flex {
+    flex-direction: row;
+  }
+
+  .container--flex > * {
+    flex-basis: 100%;
+  }
+
+  .container--flex > * + * {
+    margin-left: 12rem;
+  }
+
+  .container--items p {
+    /* width: 60%; */
+
+    font-size: clamp(1rem, 1.5vw, 3rem);
+  }
+  .container--items h1 {
+    font-size: clamp(1rem, 3vw, 5rem);
+  }
+
+  .btn button {
+    position: absolute;
+    left: 40%;
+  }
+}
+
+/* ----------------- Second Section ------------------ */
+
+.featured-projects {
+  font-size: clamp(1.5rem, 4vw, 5rem);
+}
+
+.language-name h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.5em;
+}
+
+.language-name {
+  display: flex;
+
+  padding: 1em 0;
+  /* margin: 0 auto; */
+}
+
+@media (min-width: 50em) {
+  .featured-projects {
+    padding: 0 6.5em 1.2em 6.5em;
+  }
+
+  .btn--visit button {
+    position: absolute;
+    right: 5.2rem;
+
+    border-radius: 1px;
+  }
+}
+
+/* --------------- Section skills ------------- */
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-flex h1 {
+  padding-bottom: 1em;
+}
+.skills img {
+  max-width: 23%;
+  padding-left: 1.6em;
+}
+
+@media (min-width: 50em) {
+  .skills img {
+    max-width: 40%;
+  }
+}
+
+/* --------------------- Contact Section --------------- */
+
+.contact--flex {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-details p {
+  max-width: 990px;
+  line-height: 1.5rem;
+}
+
+.contact-Us {
+  display: flex;
+  flex-direction: column;
+}
+
+#input,
+#input-text[type='text'] {
+  display: inline-block;
+  width: 100%;
+
+  height: 3em;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0 0.8em;
+  outline: none;
+}
+
+#input-text[type='text']:focus {
+  height: 10em;
+  /* transform: all linear 0.9s; */
+}
+
+.details {
+  padding-bottom: 1.5em;
+}
+
+@media (min-width: 50em) {
+  .contact-Us {
+    flex-direction: row;
+  }
+  .contact-Us > * + * {
+    padding-left: 10em;
+  }
+  .contact-Us + * {
+    padding-top: 5em;
+  }
+}
