@@ -1,5 +1,7 @@
 'use strict';
 
+const { async } = require('regenerator-runtime');
+
 const toggle = document.querySelector('.toggle-bar');
 const navItems = document.querySelector('.nav-links');
 
@@ -29,3 +31,22 @@ smooth.addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+////////////////////////////////////////////////////////////////
+
+// Form submit
+
+// const form = document.getElementById('my-form');
+// const btnsubmit = document.querySelector('.btnsubmit');
+
+// const sendData = async function () {
+//   const rec = await fetch('https://formspree.io/f/xlezeoyo'), {
+//     Method: 'Post', {
+
+//     }
+//   }
+//   console.log(rec);
+
+// };
+
+// sendData();
