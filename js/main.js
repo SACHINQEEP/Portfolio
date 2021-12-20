@@ -1,7 +1,7 @@
 'use strict';
 
 const toggle = document.querySelector('.toggle-bar');
-const navItems = document.querySelector('.nav-items');
+const navItems = document.querySelector('.nav-links');
 
 toggle.addEventListener('click', function (e) {
   e.preventDefault();

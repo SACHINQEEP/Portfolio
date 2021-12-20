@@ -135,11 +135,6 @@ button:hover {
   text-align: center;
 }
 
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
 ul > li {
   /* background-color: var(--secondary); */
   margin-inline: auto;
@@ -157,6 +152,10 @@ ul > li {
 .split {
   display: flex;
   flex-direction: column;
+}
+
+.nav-links.hidden {
+  visibility: hidden;
 }
 
 /* ------------------ Nav-Bar media query ----------------------------- */
@@ -183,10 +182,10 @@ ul > li {
     font-family: var(--Montserrat);
   }
   .toggle-bar {
-    opacity: 0;
+    visibility: hidden;
   }
-  .hidden {
-    opacity: 1;
+  .nav-links.hidden {
+    visibility: visible;
   }
 }
 
