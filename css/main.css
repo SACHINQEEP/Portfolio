@@ -123,6 +123,10 @@ button:hover {
   width: clamp(200px, 90%, 100em);
 }
 
+/* .nav-items > ul > li {
+  padding: 1.5em 0;
+} */
+
 .bg--grey {
   background-color: var(--primary);
 }
@@ -139,6 +143,8 @@ ul > li {
   /* background-color: var(--secondary); */
   margin-inline: auto;
   list-style-type: none;
+  padding: 1.5em 0;
+
   /* border-bottom: 0.1rem solid; */
 }
 
@@ -156,6 +162,7 @@ ul > li {
 
 .nav-links.hidden {
   visibility: hidden;
+  opacity: 0;
 }
 
 /* ------------------ Nav-Bar media query ----------------------------- */
@@ -176,6 +183,10 @@ ul > li {
     justify-content: space-between;
     width: 30rem;
   }
+
+  .nav-items > ul > li {
+    padding: 0.5em 0;
+  }
   .name h3 {
     font-size: 1.5rem;
     padding: 0.8em 0;
@@ -186,16 +197,20 @@ ul > li {
   }
   .nav-links.hidden {
     visibility: visible;
+    opacity: 1;
+  }
+  .nav-links {
+    overflow: visible;
   }
 }
 
 /* ------------------ Heder container ------------------- */
 .container--center {
-  padding: 2em 0 5em 0;
+  padding: 2em 0 2em 0;
 }
 
 .scroll-bar {
-  padding: 2em 0 0 0;
+  visibility: hidden;
 }
 
 /* --------------------- Media query for the header ---------------------- */
@@ -205,7 +220,8 @@ ul > li {
   }
   .scroll-bar {
     position: relative;
-    bottom: -14rem;
+    bottom: -10rem;
+    visibility: visible;
   }
 }
 
@@ -230,9 +246,13 @@ ul > li {
   padding: 3em 0;
 }
 
+.btn {
+  padding: 0 1.2em;
+}
+
 @media (min-width: 50em) {
   .container--padding {
-    padding: 4em 0 6em 0;
+    padding: 2.5em 0 6em 0;
   }
 
   .container--flex {
@@ -266,6 +286,8 @@ ul > li {
 
 .featured-projects {
   font-size: clamp(1.5rem, 4vw, 5rem);
+  align-items: center;
+  /* padding: 0 0.2em; */
 }
 
 .language-name h6 {
@@ -281,6 +303,13 @@ ul > li {
   /* margin: 0 auto; */
 }
 
+.container--items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 50em) {
   .featured-projects {
     padding: 0 6.5em 1.2em 6.5em;
@@ -291,6 +320,10 @@ ul > li {
     right: 5.2rem;
 
     border-radius: 1px;
+  }
+  .container--items {
+    justify-content: start;
+    align-items: flex-start;
   }
 }
 
