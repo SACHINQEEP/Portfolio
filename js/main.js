@@ -28,6 +28,7 @@ navItems.addEventListener('click', function (e) {
 
   if (e.target.classList.contains('items')) {
     const id = e.target.getAttribute('href');
+    console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });

@@ -128,7 +128,8 @@ button:hover {
 } */
 
 .bg--grey {
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: rgba(12, 12, 12, 0.871);
 }
 
 .bg-light {
@@ -158,7 +159,7 @@ ul {
 }
 
 .icon {
-  padding: 1em 1em;
+  padding: 1em 0;
 }
 
 .toogle {
@@ -169,7 +170,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* background-color: ; */
   overflow: hidden;
 }
 
@@ -178,7 +178,6 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: grey; */
   color: white;
   padding: 0 0 1.5em 0;
 }
@@ -187,16 +186,16 @@ ul {
   visibility: hidden;
 }
 
-.items {
-  padding: 1.5em 0 0 0;
-}
-
-.items a {
+.list a {
   color: white;
 }
 
+.list {
+  padding: 1.2em 0;
+}
+
 .active {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
 }
 
 .nav-items {
@@ -219,8 +218,13 @@ ul {
   .nav-items {
     width: 40em;
     justify-content: space-evenly;
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding-top: 0.7em;
+    background-color: rgba(12, 12, 12, 0.01);
+  }
+
+  .list {
+    padding: 1.5em 0 0 0;
   }
 
   .hidden {
