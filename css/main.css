@@ -135,72 +135,96 @@ button:hover {
   background-color: var(--secondary);
 }
 
-.nav-items {
-  text-align: center;
+a {
+  color: black;
+  text-decoration: none;
 }
 
-ul > li {
-  /* background-color: var(--secondary); */
-  margin-inline: auto;
+ul {
   list-style-type: none;
-  padding: 1.5em 0;
-
-  /* border-bottom: 0.1rem solid; */
 }
 
-.toggle-bar {
-  position: absolute;
-  left: 85%;
-  top: 1rem;
+.icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon,
+.toogle {
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 500;
+  color: white;
+}
+
+.icon {
+  padding: 1em 1em;
+}
+
+.toogle {
   opacity: 1;
 }
 
-.split {
+.content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  /* background-color: ; */
+  overflow: hidden;
 }
 
-.nav-links.hidden {
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: grey; */
+  color: white;
+  padding: 0 0 1.5em 0;
+}
+
+.hidden {
   visibility: hidden;
-  opacity: 0;
 }
 
-/* ------------------ Nav-Bar media query ----------------------------- */
+.items {
+  padding: 1.5em 0 0 0;
+}
+
+.items a {
+  color: white;
+}
+
+.active {
+  border-bottom: 1px solid white;
+}
+
+.nav-items {
+  max-height: 0vh;
+  overflow: hidden;
+}
 
 @media (min-width: 50em) {
-  .split {
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--primary);
+  .toogle {
+    opacity: 0;
   }
 
-  .split {
-    flex-basis: 100%;
+  .icon {
+    font-size: 1.8rem;
   }
-  .nav-items ul {
-    display: flex;
+  .content,
+  .nav-items {
     flex-direction: row;
-    justify-content: space-between;
-    width: 30rem;
+  }
+  .nav-items {
+    width: 40em;
+    justify-content: space-evenly;
+    font-size: 1.3em;
+    padding-top: 0.7em;
   }
 
-  .nav-items > ul > li {
-    padding: 0.5em 0;
-  }
-  .name h3 {
-    font-size: 1.5rem;
-    padding: 0.8em 0;
-    font-family: var(--Montserrat);
-  }
-  .toggle-bar {
-    visibility: hidden;
-  }
-  .nav-links.hidden {
+  .hidden {
     visibility: visible;
-    opacity: 1;
-  }
-  .nav-links {
-    overflow: visible;
   }
 }
 

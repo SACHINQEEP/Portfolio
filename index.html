@@ -12,27 +12,27 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header>
-      <nav class="bg--grey">
-        <div class="container split">
-          <div class="name">
-            <h3>Sachin Patel</h3>
+    <header class="bg--grey">
+      <div class="container">
+        <div class="content">
+          <div class="icon">
+            <span>Sachin Patel</span>
+            <div class="toogle"><i class="fas fa-hamburger"></i></div>
           </div>
-          <div class="toggle-bar">
-            <a href="#"><i class="fas fa-bars fa-2x"></i></a>
-          </div>
-          <div class="nav-items">
-            <ul class="nav-links nav-item ">
-              <li><a class="nav-link" href="#section--1">Home</a></li>
-              <li><a class="nav-link" href="#section--2">Projects</a></li>
-              <li><a class="nav-link" href="#section--3">About</a></li>
-              <li><a class="nav-link" href="#section--4">Contact</a></li>
-            </ul>
-          </div>
+          <nav>
+            <div class="nav">
+              <ul class="nav-items hidden">
+                <li class="items active"><a href="#section--1">Home</a></li>
+                <li class="items"><a href="#section--2">Projects</a></li>
+                <li class="items"><a href="#section--3">About</a></li>
+                <li class="items"><a href="#section--4">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
         </div>
-    </div>
-    </nav>
-  </header>
+      </div>
+    </header>
+  <main>
     <section class="bg--grey">
       <div class="container container--center">
         <div class="intro">
@@ -47,7 +47,6 @@
         </div>
       </div>
     </section>
-    <main>
       <section class=" bg-light" id= "section--3">
         <div class="container container--padding " >
           <div class="container--flex">
@@ -152,7 +151,7 @@
             <label for="">Velit officia consequat duis enim velit mollit</label>
           </div> -->
           <div class="contact-Us">
-            <form id="my-form" action="https://formspree.io/f/xlezeoyo" method="Post">
+            <form id="my-form" action="https://formspree.io/f/xlezeoyo" method="POST">
 
             <label for="input">Name <input  type="text" id="input" placeholder="Name" name="Name"></label>
             
