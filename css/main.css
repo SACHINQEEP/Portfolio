@@ -152,7 +152,7 @@ ul {
 
 .icon,
 .toogle {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-style: italic;
   font-weight: 500;
   color: white;
@@ -164,6 +164,7 @@ ul {
 
 .toogle {
   opacity: 1;
+  cursor: pointer;
 }
 
 .content {
@@ -195,7 +196,7 @@ ul {
 }
 
 .active {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(255, 253, 253);
 }
 
 .nav-items {
@@ -218,7 +219,7 @@ ul {
   .nav-items {
     width: 40em;
     justify-content: space-evenly;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     padding-top: 0.7em;
     background-color: rgba(12, 12, 12, 0.01);
   }
@@ -235,6 +236,15 @@ ul {
 /* ------------------ Heder container ------------------- */
 .container--center {
   padding: 2em 0 2em 0;
+}
+
+.intro > h3,
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+.intro p {
+  color: rgb(255, 255, 255);
 }
 
 .scroll-bar {
@@ -264,6 +274,11 @@ ul {
 
 .container--items {
   padding: 2em 0;
+}
+
+.container--items h1,
+p {
+  color: rgb(55, 54, 54);
 }
 
 .container--items h1 {
@@ -318,6 +333,10 @@ ul {
   /* padding: 0 0.2em; */
 }
 
+.featured-projects h1 {
+  color: rgb(55, 54, 54);
+}
+
 .language-name h6 {
   font-size: 0.9rem;
   font-weight: 400;
@@ -341,6 +360,10 @@ ul {
 @media (min-width: 50em) {
   .featured-projects {
     padding: 0 6.5em 1.2em 6.5em;
+  }
+
+  .featured-projects h1 {
+    color: rgb(55, 54, 54);
   }
 
   .btn--visit button {
@@ -395,6 +418,10 @@ ul {
 .contact-Us {
   display: flex;
   flex-direction: column;
+}
+
+.bg--color p {
+  color: rgb(255, 255, 255);
 }
 
 #input,
