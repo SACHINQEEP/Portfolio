@@ -24,13 +24,27 @@ toogle.addEventListener('click', function (e) {
 
 navItems.addEventListener('click', function (e) {
   e.preventDefault();
-  console.log(e.target);
+  // console.log(e.target);
 
   if (e.target.classList.contains('items')) {
     const id = e.target.getAttribute('href');
-    console.log(id);
+    // console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
 
 ////////////////////////////////////////////////////////////////
+
+const tapContent = document.querySelector('.nav');
+const tap = document.querySelectorAll('.items');
+
+tapContent.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.items');
+  console.log(clicked);
+
+  if (!clicked) return;
+
+  tap.forEach(t => t.classList.remove('nav--items_active'));
+
+  clicked.classList.add('nav--items_active');
+});
