@@ -226,7 +226,7 @@ ul {
 
   .nav--animation {
     background: rgba(225, 225, 225, 0.2);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(80%);
     box-shadow: 0 1px 8px rgba(255, 255, 255, 0.905),
       0 -1px 10px rgba(255, 255, 255, 0.905);
     /* border: 1px solid white; */
@@ -238,6 +238,14 @@ ul {
     padding-left: 5rem;
     width: 100%;
   }
+
+  /* .sticky-color {
+    position: fixed;
+    top: 0;
+    padding-left: 5rem;
+    width: 100%;
+    background: rgba(70, 68, 68, 0.775);
+  } */
 
   .list {
     padding: 1.5em 0 0 0;
