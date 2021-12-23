@@ -235,7 +235,7 @@ ul {
 
 /* ------------------ Heder container ------------------- */
 .container--center {
-  padding: 2em 0 2em 0;
+  padding: 0 0 2em 0;
 }
 
 .intro > h3,
@@ -247,19 +247,46 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
-.scroll-bar {
-  visibility: hidden;
+.display--flex_content {
+  display: flex;
+  flex-direction: column-reverse;
+
+  margin: 0 auto;
 }
+
+.display--flex_content > * + * {
+  margin-bottom: 3rem;
+}
+
+/* .display--flex_content > * {
+  flex-basis: 100%;
+} */
 
 /* --------------------- Media query for the header ---------------------- */
 @media (min-width: 50em) {
   .container--center {
-    padding: 8em 0 20em 0;
+    padding: 8em 0 6em 0;
   }
-  .scroll-bar {
-    position: relative;
-    bottom: -10rem;
-    visibility: visible;
+
+  .display--flex_content {
+    flex-direction: row;
+  }
+
+  .display--flex_content > * {
+    flex-basis: 100%;
+  }
+
+  .display--flex_content > * + * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 43%;
+  }
+
+  .display--flex_content .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

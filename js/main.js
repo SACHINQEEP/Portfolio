@@ -35,6 +35,9 @@ navItems.addEventListener('click', function (e) {
 
 ////////////////////////////////////////////////////////////////
 
+//For showing the active bar and container 
+//For container we just need the data-set 
+
 const tapContent = document.querySelector('.nav');
 const tap = document.querySelectorAll('.items');
 
@@ -48,3 +51,4 @@ tapContent.addEventListener('click', function (e) {
 
   clicked.classList.add('nav--items_active');
 });
+
