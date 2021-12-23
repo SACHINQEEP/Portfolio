@@ -265,7 +265,7 @@ h1 {
 /* --------------------- Media query for the header ---------------------- */
 @media (min-width: 50em) {
   .container--center {
-    padding: 8em 0 6em 0;
+    padding: 4em 0 6em 0;
   }
 
   .display--flex_content {
