@@ -1,10 +1,10 @@
 'use strict';
 
-const { async } = require('regenerator-runtime');
+// const { async } = require('regenerator-runtime');
 
 const toogle = document.querySelector('.toogle');
 const navItems = document.querySelector('.nav-items');
-const animation = document.querySelector('nav');
+// const animation = document.querySelector('nav');
 
 toogle.addEventListener('click', function (e) {
   e.preventDefault();
@@ -38,16 +38,41 @@ navItems.addEventListener('click', function (e) {
 //For showing the active bar and container
 //For container we just need the data-set
 
-const tapContent = document.querySelector('.nav');
-const tap = document.querySelectorAll('.items');
+const section = document.querySelector('.nav--content');
+// const nav = document.querySelector('.container');
+const header = document.querySelector('.section');
 
-tapContent.addEventListener('click', function (e) {
-  const clicked = e.target.closest('.items');
-  console.log(clicked);
+const getHeight = section.getBoundingClientRect().height;
+// console.log(getHeight);
 
-  if (!clicked) return;
+const scrollView = function (entries) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) section.classList.add('sticky-color');
+    else section.classList.remove('sticky-color');
+  });
+};
 
-  tap.forEach(t => t.classList.remove('nav--items_active'));
-
-  clicked.classList.add('nav--items_active');
+const observerAPI = new IntersectionObserver(scrollView, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${getHeight}px`,
 });
+
+observerAPI.observe(header);
+
+// animation for section--3
+
+const section3 = document.querySelector('.section--anim_1');
+
+const sectionview = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) section3.classList.add('container-animation');
+  else section3.classList.remove('container-animation');
+};
+
+const sectionThObserver = new IntersectionObserver(sectionview, {
+  root: null,
+  threshold: 0.9,
+});
+
+sectionThObserver.observe(header);
