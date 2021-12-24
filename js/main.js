@@ -51,35 +51,3 @@ tapContent.addEventListener('click', function (e) {
 
   clicked.classList.add('nav--items_active');
 });
-
-///////////////////////////////////////////////////////////////////////////////
-
-const section = document.querySelectorAll('.bg-light');
-console.log(section);
-// const nav = document.querySelector('.content');
-
-// const navBarSection = section.getBoundingClientRect().height;
-// console.log(navBarSection);
-
-const stickyNav = function (entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      nav.classList.add('sticky-color');
-    } else nav.classList.remove('sticky-color');
-  });
-};
-
-console.log(stickyNav);
-
-const object = {
-  root: null,
-  threshold: 0,
-  // rootMargin: `-${navBarSection}px`,
-};
-
-console.log(object);
-
-const observerAPI = new IntersectionObserver(stickyNav, object);
-console.log(observerAPI);
-
-observerAPI.observe(section);
