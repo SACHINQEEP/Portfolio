@@ -35,6 +35,20 @@ navItems.addEventListener('click', function (e) {
 
 ////////////////////////////////////////////////////////////////
 
+// Active Bar movement
+const tabs = document.querySelectorAll('.items');
+const nav = document.querySelector('.nav');
+
+nav.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.items');
+  // console.log(clicked);
+  if (!clicked) return;
+
+  tabs.forEach(el => el.classList.remove('nav--items_active'));
+
+  clicked.classList.add('nav--items_active');
+});
+
 //For showing the active bar and container
 //For container we just need the data-set
 
