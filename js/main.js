@@ -33,8 +33,6 @@ navItems.addEventListener('click', function (e) {
   }
 });
 
-////////////////////////////////////////////////////////////////
-
 // Active Bar movement
 const tabs = document.querySelectorAll('.items');
 const nav = document.querySelector('.nav');

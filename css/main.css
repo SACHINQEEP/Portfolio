@@ -158,10 +158,6 @@ ul {
   color: white;
 }
 
-.icon {
-  padding: 1em 0;
-}
-
 .toogle {
   opacity: 1;
   cursor: pointer;
@@ -230,8 +226,7 @@ ul {
 
   .nav--animation {
     background: rgba(225, 225, 225, 0.2);
-    backdrop-filter: blur(50%);
-    box-shadow: 0 0.5px 8px rgba(255, 255, 255, 0.905);
+    backdrop-filter: blur(10px);
     /* border: 1px solid white; */
   }
 
@@ -345,6 +340,31 @@ h1 {
     flex-direction: column;
     justify-content: center;
   }
+  .intro h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid orange;
+    animation: typing 5.2s steps(30, end), blink-caret 1s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
 }
 
 /*-------- Media query for the container--flex(Section-1)-------------- */
@@ -451,6 +471,10 @@ p {
   .btn button {
     position: absolute;
     left: 40%;
+  }
+  .move--left {
+    text-align: center;
+    margin-left: 12rem;
   }
 }
 
