@@ -77,14 +77,15 @@ observerAPI.observe(header);
 const section3 = document.querySelector('.section--anim_1');
 
 const sectionview = function (entries) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) section3.classList.add('container-animation');
-  else section3.classList.remove('container-animation');
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) section3.classList.add('container-animation');
+    else section3.classList.remove('container-animation');
+  });
 };
 
 const sectionThObserver = new IntersectionObserver(sectionview, {
   root: null,
-  threshold: 0.9,
+  threshold: 0.8,
 });
 
 sectionThObserver.observe(header);

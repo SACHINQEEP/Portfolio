@@ -161,6 +161,7 @@ ul {
 .toogle {
   opacity: 1;
   cursor: pointer;
+  margin: 1.5rem 1rem;
 }
 
 .content {
@@ -227,7 +228,6 @@ ul {
   .nav--animation {
     background: rgba(225, 225, 225, 0.2);
     backdrop-filter: blur(10px);
-    /* border: 1px solid white; */
   }
 
   .sticky {
@@ -309,10 +309,6 @@ h1 {
 .display--flex_content > * + * {
   margin-bottom: 3rem;
 }
-
-/* .display--flex_content > * {
-  flex-basis: 100%;
-} */
 
 /* --------------------- Media query for the header ---------------------- */
 @media (min-width: 50em) {
@@ -400,26 +396,26 @@ p {
 /* Section-3 animation */
 
 .container-animation {
-  animation: animate 0.9s ease-in;
+  animation: animate 1.5s linear;
 }
 
 @keyframes animate {
   0% {
-    transform: translateY(5rem);
+    transform: translateX(-5rem);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
 .container-animation img {
-  animation: animation 1.5s ease-in;
+  animation: animation 1.5s linear;
 }
 
 @keyframes animation {
   0% {
-    transform: translateX(5rem);
+    transform: translateX(8rem);
     opacity: 0;
   }
   100% {
