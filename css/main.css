@@ -48,6 +48,7 @@ h6 {
   color: var(--dark-text);
   max-width: 100%;
   letter-spacing: 0.1rem;
+  text-align: center;
 }
 p {
   font-size: 0.8rem;
@@ -56,6 +57,19 @@ p {
   font-weight: lighter;
   color: var(--main-text);
   max-width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  p {
+    text-align: start;
+  }
+  h1,
+  h2,
+  h3,
+  h6 {
+    text-align: start;
+  }
 }
 
 @media (min-width: 50em) {
@@ -479,17 +493,22 @@ p {
 .featured-projects {
   font-size: clamp(1.5rem, 4vw, 5rem);
   align-items: center;
+  text-align: center;
   /* padding: 0 0.2em; */
 }
 
-.content--grey_img img {
+/* .content--grey_img img {
   filter: contrast(50%);
   z-index: 1;
-}
+} */
 
-.content--grey_img:hover img {
+/* .content--grey_img:hover img {
   filter: contrast(100%);
   z-index: 1;
+} */
+
+.project--img {
+  width: 100%;
 }
 
 .featured-projects h1 {
@@ -522,6 +541,7 @@ p {
   }
 
   .featured-projects h1 {
+    text-align: center;
     color: rgb(55, 54, 54);
   }
 
