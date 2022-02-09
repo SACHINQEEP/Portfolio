@@ -82,15 +82,11 @@ a {
   }
   .contact--details__header h1 {
     width: 474px;
-    /* font-size: 64px; */
+    font-size: 64px;
     margin: 6rem;
   }
 
   .btn--ContactNow__square {
     margin-left: 6rem;
-  }
-
-  .contact--details__header h1 {
-    font-size: calc(0.5rem, 2rem);
   }
 }
