@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+.about_Me,
+.certificate,
+.contact--details__aboutMepage {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.about_Me h1 {
+  padding-bottom: 2.5rem;
+}
+
+.about--me_flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.content--aboutMe p {
+  padding: 0.3rem 0;
+}
+
+.certificate--img img {
+  border: 1px solid;
+}
+
+.contact--details__aboutMepage {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-ligh__about {
+  background-color: rgb(165, 165, 165);
+}
+
+@media (min-width: 50em) {
+  .about_Me {
+    margin-top: 6rem;
+  }
+  .about_Me h1 {
+    text-align: center;
+    padding-bottom: 3.5rem;
+  }
+
+  .certificate h1 {
+    text-align: center;
+    padding-bottom: 3.5rem;
+  }
+  .about--me_flexbox {
+    flex-direction: row;
+  }
+  .img--aboutMe,
+  .content--aboutMe,
+  .contact--details__header,
+  .contact--details__img {
+    width: 100%;
+  }
+  .content--aboutMe p {
+    font-size: 1.2rem;
+    padding: 0.7rem 0;
+  }
+  .contact--details__aboutMepage {
+    flex-direction: row;
+  }
+  .contact--details__header h1 {
+    width: 474px;
+    /* font-size: 64px; */
+    margin: 6rem;
+  }
+
+  .btn--ContactNow__square {
+    margin-left: 6rem;
+  }
+
+  .contact--details__header h1 {
+    font-size: calc(0.5rem, 2rem);
+  }
+}
